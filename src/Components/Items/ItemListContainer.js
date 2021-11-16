@@ -1,4 +1,5 @@
 import React from 'react'
+import './item.css';
 
  
 export default function  ItemListContainer ( {greeting})  {
@@ -6,7 +7,7 @@ export default function  ItemListContainer ( {greeting})  {
 
 
     return (
-        <div>
+        <div className= "container">
 
             <h1> {greeting} </h1>
 

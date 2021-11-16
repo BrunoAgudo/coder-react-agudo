@@ -1,0 +1,13 @@
+.cont {
+
+    text-align: center;
+    border-color: grey;
+    border-width: 3px ;
+    border-style: solid;
+    font: small-caps bold 24px/1 sans-serif;
+}
+
+.sum {
+
+    text-align: right;
+}
