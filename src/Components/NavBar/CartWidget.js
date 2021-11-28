@@ -8,7 +8,7 @@ export default function CartWidget () {
 
     return (
     <div>
-            <BsFillBasket2Fill className= "Icon"/>
+            <BsFillBasket2Fill className= "icon"/>
     </div>
     )
 }

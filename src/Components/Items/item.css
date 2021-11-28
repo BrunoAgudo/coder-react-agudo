@@ -1,13 +1,52 @@
 .cont {
-
-    text-align: center;
-    border-color: grey;
-    border-width: 3px ;
-    border-style: solid;
-    font: small-caps bold 24px/1 sans-serif;
+    
+        box-sizing: border-box;
+        margin-bottom: 3px;
+        margin-left: 3px;
+        width: 38px;
+        text-align: center;
+    
+    
+    
 }
 
 .sum {
-
-    text-align: right;
+    size: 36px, 28px;
+    padding-right: 4px;
 }
+
+.item {
+
+    border-width: 2px;
+    border-color:grey}
+
+.rest {
+
+    padding-left: 4px;
+}
+.primary {
+
+    margin-left: 48px;
+    margin-right: 48px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    padding-left: 12px;
+}
+
+
+.titulo {
+
+    text-align: center;
+    margin: 8px;
+}
+
+.contador {
+padding-left: 80px;
+margin-bottom: 5px;
+}
+
+hr{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+

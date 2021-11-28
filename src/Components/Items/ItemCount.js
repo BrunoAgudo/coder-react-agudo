@@ -21,13 +21,18 @@ export default function ItemCount  () {
     } 
     
     return (
-        <div className= "container">
-            <div className = "row">        
-               <div className="col-sm-2 sum"> <button  onClick={resta}type="button" className="btn btn-danger "> - </button> </div>
-               <div className="col-sm-2 cont"> {contador} </div>
-               <div className="col-sm-2"> <button onClick={suma} type="button" className="btn btn-success "> + </button> </div> 
+        <div className= "contador">
+    { /*       <div className = "row">        
+               <div className="col-sm-4 "> <button  onClick={resta}type="button" className="btn btn-danger " > - </button> </div>
+               <div className="col-sm-4 cont"> {contador} </div>
+               <div className="col-sm-4 "> <button onClick={suma} type="button" className="btn btn-success "> + </button> </div> 
             
-            </div>  
+    </div>  */}
+            
+                <button  onClick={resta}type="button" className="btn btn-danger cont " > - </button> 
+               <span className="btn cont" > {contador} </span>
+               <button onClick={suma} type="button" className="btn btn-success cont "> + </button> 
+              
         </div>
 
     )

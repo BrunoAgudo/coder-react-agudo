@@ -2,17 +2,19 @@
 import './App.css';
 import NavBar from './Components/NavBar/NavBar'
 import ItemListContainer from './Components/Items/ItemListContainer'
-import ItemCount from './Components/Items/ItemCount'
+
 
 
 
 function App() {
+
+   let greeting= "Bienvenidos a Yaguaron"
   return (
     <div >
      <NavBar/>
-     <ItemListContainer  greeting = "Bienvenidos a Yaguaron"/>
-     <br/>
-     <ItemCount/>
+     <h1 className="container"> {greeting} </h1>
+     <ItemListContainer/>
+    
     </div>
   );
 }
