@@ -1,13 +1,17 @@
-import React, { useState } from "react";
+import React, {  useState } from "react";
 import './item.css';
 
-export default function ItemCount  () {
 
+
+export default function ItemCount  () {
+   
+    
   const  [contador, setContador] = useState(1)
 
+   let cantidad = 10
     const suma = () => {
-       let stock = 10
-        if (contador < stock) {
+    
+        if (contador < cantidad) {
              setContador(contador + 1)
             console.log(contador) }
         else {setContador (contador)}
