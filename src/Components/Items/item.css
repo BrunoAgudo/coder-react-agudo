@@ -50,3 +50,14 @@ hr{
     margin-bottom: 0px;
 }
 
+.price {
+
+font-size: x-large;
+margin-bottom: 20px;
+}
+
+.bot {
+
+    text-align: center;
+    color: green;
+}

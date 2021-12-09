@@ -1,28 +1,30 @@
-import React from 'react'
+import React  from 'react'
 import {Navbar, Nav, NavDropdown, Container} from 'react-bootstrap'
 import './NavBar.css'
 import CartWidget from './CartWidget'
+import { Link } from 'react-router-dom'
 
 
 export default function NavBar () {
 
 
  return (
+   
 <Navbar bg="light" expand="lg" >
   <Container >
-    <Navbar.Brand href="#home">Yaguaron <br/> <span className = "subtitulo">Equipamiento de Gimnasios </span></Navbar.Brand>
+    <Link className ="navbar-brand" to="/">Yaguaron <br/> <span className ="subtitulo">Equipamiento de Gimnasios </span></Link>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="me-auto">
         
         <NavDropdown title="Productos" id="basic-nav-dropdown">
           
-          <NavDropdown.Item href="#action/3.3">Aeróbicos</NavDropdown.Item>
-          <NavDropdown.Item href="#action/3.3">Accesorios</NavDropdown.Item>
-          <NavDropdown.Item href="#action/3.1">Barras y Discos</NavDropdown.Item>
-          <NavDropdown.Item href="#action/3.2">Mancuernas y Pesas Rusas</NavDropdown.Item>
+          <Link className="dropdown-item" to="/category/aerobico/"> Aeróbicos</Link>
+          <Link className="dropdown-item" to="/category/accesorio/">Accesorios</Link>
+          <Link className="dropdown-item" to="/category/barras/">Barras y Discos</Link>
+          <Link  className="dropdown-item"to="/category/mancuernas/">Mancuernas y Pesas Rusas</Link>
           <NavDropdown.Divider />
-          <NavDropdown.Item href="#action/3.4">Métodos de pagos</NavDropdown.Item>
+          <Link className="dropdown-item" to="/">Métodos de pagos</Link>
         </NavDropdown>
       </Nav>
     </Navbar.Collapse>

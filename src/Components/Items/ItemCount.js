@@ -9,7 +9,7 @@ export default function ItemCount  () {
   const  [contador, setContador] = useState(1)
 
    let cantidad = 10
-    const suma = () => {
+    const suma = () => { 
     
         if (contador < cantidad) {
              setContador(contador + 1)

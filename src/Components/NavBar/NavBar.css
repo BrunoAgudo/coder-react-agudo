@@ -1,6 +1,7 @@
 .subtitulo {
 
     font-size: small;
+    font-style: italic;
 }
 
 #basic-nav-dropdown {
@@ -11,6 +12,7 @@
 
 .icon {
 
-    color: lightblue;
+    color: rgb(29, 177, 226);
     font-size: 36px;
 }
+

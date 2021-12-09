@@ -19,7 +19,7 @@ export const stock = [
         name: "Mancuerna",
         detail: "Mancuerna -5kg - el par                ",
         img: "https://cdn.shopify.com/s/files/1/2305/2011/products/1600_1600_5087b6fa-1629bd134d6--7ffd8684582575366813101.upload.png?v=1614115352",
-        category: 'mancuernas y pesas rusas',
+        category: 'mancuernas',
         description: "...",
         cantidad: 84
     },
@@ -29,7 +29,7 @@ export const stock = [
         name: "Pesa Rusa",
         detail: "Pesa rusa - 12kg - Fundicion ",
         img: "https://d3ugyf2ht6aenh.cloudfront.net/stores/966/664/products/ktl12a1-685be8b77cbbd0428416135848776807-1024-1024.jpg",
-        category: 'mancuernas y pesas rusas',
+        category: 'mancuernas',
         description: "...",
         cantidad: 14
     },

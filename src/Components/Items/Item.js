@@ -1,7 +1,8 @@
 import React from "react";
 import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
+
 import './item.css';
+import { Link } from "react-router-dom";
 
 
 export default function Item ({prod}) {
@@ -18,7 +19,7 @@ export default function Item ({prod}) {
                 <Card.Text> Precio: ${prod.price}  </Card.Text>
             
              </Card.Body>   <hr/>                     
-                <Button variant="primary" className="primary" size="sm"  >Ver más</Button>
+                <Link to={`/detail/${prod.id}`} variant="primary" className="btn btn-primary" size="sm"  >Ver más</Link> <br/>
         </Card>
        
        
