@@ -1,14 +1,25 @@
 
 import React from "react"
-import Button from 'react-bootstrap/Button';
+import {useNavigate, Link} from "react-router-dom"
 import ItemCount from "../ItemCount";
 import { Container, Row, Col } from 'react-bootstrap';
 import './../item.css';
+import { useState } from "react"
 
 
 
-export default function ItemDetail ({img, name, cantidad, price, description }) {
+export default function ItemDetail ({img, name, cantidad, price, description}) {
+    const [terminar, setTerminar] = useState(false)
+    const  [contador, setContador] = useState(0)
+    
+    const navigate = useNavigate()
+    
+    const volveratras = () => {
+         navigate (-1)    }
 
+    const agregarCart = () => {
+        setTerminar(true)
+    }
 
     return (
         
@@ -19,9 +30,22 @@ export default function ItemDetail ({img, name, cantidad, price, description }) 
                 <Col sm={4}> 
                     <h2> {name} </h2> <br/>
                     <p> Stock Disponible:  {cantidad} </p>
-                    <p className="price"> $ {price} </p><br/>
-                    <ItemCount/> <hr/>
-                    <Button variant="primary" className="bot" size="lg" > Comprar </Button> </Col>
+                    <p className="price"> $ {price} </p>
+                    
+                    <br/>
+
+                {  !terminar ? 
+                    <ItemCount
+                         max={cantidad} 
+                         contador={contador} 
+                         setContador={setContador} 
+                         agregarCart={agregarCart}/> 
+                         : 
+                    <Link to="/cart" className='btn btn-success'>Terminar compra </Link> }
+                         <hr/>
+                
+                    <button onClick={volveratras} className="btn btn-secondary my-2" size="lg" > Volver </button> 
+                </Col>
             </Row>
             <Row> <hr/>
                 <h3>Características</h3>

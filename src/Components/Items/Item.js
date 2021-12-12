@@ -22,6 +22,7 @@ export default function Item ({prod}) {
                 <Link to={`/detail/${prod.id}`} variant="primary" className="btn btn-primary" size="sm"  >Ver más</Link> <br/>
         </Card>
        
+
        
     )
 }

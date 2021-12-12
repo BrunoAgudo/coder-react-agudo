@@ -11,7 +11,7 @@ export default function pedirDatos ()   {
 
         resolve(stock)
     
-    },1500)
+    },1000)
 
     })  
 

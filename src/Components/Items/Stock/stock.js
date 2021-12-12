@@ -21,7 +21,7 @@ export const stock = [
         img: "https://cdn.shopify.com/s/files/1/2305/2011/products/1600_1600_5087b6fa-1629bd134d6--7ffd8684582575366813101.upload.png?v=1614115352",
         category: 'mancuernas',
         description: "...",
-        cantidad: 84
+        cantidad: 12
     },
     {
         id: 3,

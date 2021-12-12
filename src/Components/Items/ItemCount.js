@@ -1,29 +1,22 @@
-import React, {  useState } from "react";
 import './item.css';
 
 
 
-export default function ItemCount  () {
+export default function ItemCount  ({max, contador, setContador, agregarCart}) {
    
     
-  const  [contador, setContador] = useState(1)
+  
 
-   let cantidad = 10
+  
     const suma = () => { 
     
-        if (contador < cantidad) {
-             setContador(contador + 1)
-            console.log(contador) }
-        else {setContador (contador)}
-    }
+        contador < max && setContador(contador + 1)  }
 
     const resta = () => {
-       let initial = 1
-        if(contador > initial) { setContador(contador - 1)
-            console.log(contador) }
-        else {  setContador (contador)  }
-    } 
-    
+
+        contador > 0 &&   setContador(contador - 1)
+            }
+     
     return (
         <div className= "contador">
     { /*       <div className = "row">        
@@ -33,9 +26,11 @@ export default function ItemCount  () {
             
     </div>  */}
             
-                <button  onClick={resta}type="button" className="btn btn-danger cont " > - </button> 
+                <button  onClick={resta}type="button" className="btn btn-secondary cont " > - </button> 
                <span className="btn cont" > {contador} </span>
-               <button onClick={suma} type="button" className="btn btn-success cont "> + </button> 
+               <button onClick={suma} type="button" className="btn btn-primary cont"> + </button> <br/>
+
+               <button onClick={agregarCart} type="button" className="btn btn-success my-2"> Agregar al Carrito </button>
               
         </div>
 
