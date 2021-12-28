@@ -3,6 +3,7 @@ import pedirDatos from '../../Recursos/pedirDatos';
 import './item.css';
 import ItemList from './ItemList'
 import {useParams} from 'react-router-dom'
+import Spinner from 'react-bootstrap/Spinner'
 
 
  
@@ -36,7 +37,7 @@ export default function  ItemListContainer ()  {
 
     return (
           <> 
-           { loading  ? <h3>Cargando...</h3>
+           { loading  ? <Spinner animation="border" variant="success" />
        
            
            : <ItemList productos ={productos}/> }

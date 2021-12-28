@@ -1,25 +1,37 @@
 
-import React from "react"
+import React, { useContext } from "react"
 import {useNavigate, Link} from "react-router-dom"
 import ItemCount from "../ItemCount";
 import { Container, Row, Col } from 'react-bootstrap';
 import './../item.css';
 import { useState } from "react"
+import { CartContext } from "../../Cart/CartContext";
 
 
 
-export default function ItemDetail ({img, name, cantidad, price, description}) {
-    const [terminar, setTerminar] = useState(false)
-    const  [contador, setContador] = useState(0)
+export default function ItemDetail ({id, img, name, cantidad, price, description, max, onAdd}) {
+
+    const {agregarCart, isInCart} = useContext(CartContext)
+
+    const [contador, setContador] = useState(0)
     
     const navigate = useNavigate()
     
     const volveratras = () => {
-         navigate (-1)    }
+         navigate (-1)   
+           }
+           
+    const agregarAlCart = () => {
+        if (contador>0) {
+            agregarCart({
+                id,
+                name,
+                price,
+                contador,
 
-    const agregarCart = () => {
-        setTerminar(true)
-    }
+            })}
+       
+       }
 
     return (
         
@@ -34,14 +46,14 @@ export default function ItemDetail ({img, name, cantidad, price, description}) {
                     
                     <br/>
 
-                {  !terminar ? 
+                {  !isInCart(id) ? 
                     <ItemCount
                          max={cantidad} 
                          contador={contador} 
                          setContador={setContador} 
-                         agregarCart={agregarCart}/> 
+                         onAdd={agregarAlCart}/> 
                          : 
-                    <Link to="/cart" className='btn btn-success'>Terminar compra </Link> }
+                    <Link to="/cart" className='btn btn-success'> Ver en el carrito </Link> }
                          <hr/>
                 
                     <button onClick={volveratras} className="btn btn-secondary my-2" size="lg" > Volver </button> 
@@ -54,5 +66,4 @@ export default function ItemDetail ({img, name, cantidad, price, description}) {
             
         </Container>
         
-    )
-}
+    )}

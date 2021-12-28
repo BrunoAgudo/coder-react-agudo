@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import pedirDatos from '../../../Recursos/pedirDatos'
 import ItemDetail from './ItemDetail'
 import { useParams } from 'react-router'
+import { Spinner } from 'react-bootstrap'
 
 
 
@@ -32,7 +33,7 @@ export default function ItemDetailContainer () {
 
 return (
     <> 
-    { loading  ? <h3>Cargando...</h3>
+    { loading  ? <Spinner animation="border" variant="success"  />
 
         
     :     <ItemDetail {...Item}/> }
